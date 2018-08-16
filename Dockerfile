@@ -5,7 +5,7 @@ LABEL Description="Eclipse Mosquitto MQTT Broker. This Image uses the hypriot/rp
 RUN apk update && \
     apk upgrade
     
-RUN apk add mosquitto=1.4.10-r2 && \
+RUN apk add mosquitto && \
     mkdir -p /mosquitto/config /mosquitto/data /mosquitto/log && \
     cp /etc/mosquitto/mosquitto.conf /mosquitto/config && \
     chown -R mosquitto:mosquitto /mosquitto && \
