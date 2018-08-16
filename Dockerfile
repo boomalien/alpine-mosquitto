@@ -1,6 +1,6 @@
 FROM alpine:3.8
-
-LABEL Description="Eclipse Mosquitto MQTT Broker. This Image uses the hypriot/rpi-alpine as base image"
+LABEL maintainer="Oliver Mazur"
+LABEL Description="Eclipse Mosquitto MQTT Broker. This Image uses alpine as base image"
 
 RUN apk update && \
     apk upgrade
