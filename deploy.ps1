@@ -23,7 +23,7 @@ docker push "$($image):$os-$env:ARCH-$env:APPVEYOR_REPO_TAG_NAME"
     docker -D manifest create "$($image):$env:APPVEYOR_REPO_TAG_NAME" `
       "$($image):linux-amd64-$env:APPVEYOR_REPO_TAG_NAME" `
       "$($image):linux-arm-$env:APPVEYOR_REPO_TAG_NAME" `
-      "$($image):linux-arm64-$env:APPVEYOR_REPO_TAG_NAME" `
+      "$($image):linux-arm64-$env:APPVEYOR_REPO_TAG_NAME"
     docker manifest annotate "$($image):$env:APPVEYOR_REPO_TAG_NAME" "$($image):linux-arm-$env:APPVEYOR_REPO_TAG_NAME" --os linux --arch arm --variant v6
     docker manifest annotate "$($image):$env:APPVEYOR_REPO_TAG_NAME" "$($image):linux-arm64-$env:APPVEYOR_REPO_TAG_NAME" --os linux --arch arm64 --variant v8
     docker manifest push "$($image):$env:APPVEYOR_REPO_TAG_NAME"
@@ -32,7 +32,7 @@ docker push "$($image):$os-$env:ARCH-$env:APPVEYOR_REPO_TAG_NAME"
     docker -D manifest create "$($image):latest" `
       "$($image):linux-amd64-$env:APPVEYOR_REPO_TAG_NAME" `
       "$($image):linux-arm-$env:APPVEYOR_REPO_TAG_NAME" `
-      "$($image):linux-arm64-$env:APPVEYOR_REPO_TAG_NAME" `
+      "$($image):linux-arm64-$env:APPVEYOR_REPO_TAG_NAME"
     docker manifest annotate "$($image):latest" "$($image):linux-arm-$env:APPVEYOR_REPO_TAG_NAME" --os linux --arch arm --variant v6
     docker manifest annotate "$($image):latest" "$($image):linux-arm64-$env:APPVEYOR_REPO_TAG_NAME" --os linux --arch arm64 --variant v8
     docker manifest push "$($image):latest"
