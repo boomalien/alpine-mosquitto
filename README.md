@@ -16,7 +16,7 @@ mkdir -p /smartHome/mosquitto/log
 #crate a simple mosquitto.conf \
 sudo bash -c "echo ""persistence true"" | tee -a /opt/mosquitto/data/mosquitto.conf" \
 sudo bash -c "echo ""persistence_location /mosquitto/data/"" | tee -a /opt/mosquitto/data/mosquitto.conf" \
-sudo bash -c "echo ""log_dest file /mosquitto/log/mosquitto.log"" | tee -a /opt/mosquitto/data/mosquitto.conf" \
+sudo bash -c "echo ""log_dest file /mosquitto/log/mosquitto.log"" | tee -a /opt/mosquitto/data/mosquitto.conf" 
 
 #run container
 docker run -it -p 1883:1883 -p 9001:9001 \
