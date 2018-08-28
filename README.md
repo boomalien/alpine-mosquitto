@@ -10,7 +10,7 @@ mosquitto docker image
 
 mkdir -p /smartHome/mosquitto \
 mkdir -p /smartHome/mosquitto/data \
-mkdir -p /smartHome/mosquitto/log \
+mkdir -p /smartHome/mosquitto/log 
 
 
 docker run -it -p 1883:1883 -p 9001:9001 \
