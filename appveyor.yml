@@ -12,7 +12,9 @@ environment:
     - ARCH: amd64
 
 install:
-  - sh: docker run --rm --privileged multiarch/qemu-user-static:register --reset
+  - sh: |
+      sudo service docker start
+      docker run --rm --privileged multiarch/qemu-user-static:register --reset
   - sh: mkdir tmp
   - sh: |
       pushd tmp &&
